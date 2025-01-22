@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { domen } from '../config'
+import { domen } from '../config';
 
 function Login() {
     const [username, setUsername] = useState('');
@@ -20,8 +20,8 @@ function Login() {
 
         if (response.ok) {
             const data = await response.json();
-            localStorage.setItem('token', data.token);  // Сохраняем токен в localStorage
-            navigate('/');  // Перенаправляем на главную страницу
+            localStorage.setItem('token', data.token); // Сохраняем токен в localStorage
+            navigate('/'); // Перенаправляем на главную страницу
         } else {
             alert('Неверные данные для входа');
         }
@@ -45,6 +45,8 @@ function Login() {
                 />
                 <button type="submit">Войти</button>
             </form>
+            <br></br>
+            <button style={{ marginTop: '20px', marginLeft: '45%', width: 'fit-content' }} onClick={() => navigate('/register')}>Нету аккаунта?</button>
         </div>
     );
 }

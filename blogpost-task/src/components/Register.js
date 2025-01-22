@@ -19,7 +19,6 @@ function Register() {
         });
 
         if (response.ok) {
-            // После успешной регистрации перенаправляем на страницу входа
             navigate('/login');
         } else {
             alert('Ошибка регистрации');
@@ -44,6 +43,8 @@ function Register() {
                 />
                 <button type="submit">Зарегистрироваться</button>
             </form>
+            <br></br>
+            <button style={{ marginTop: '20px', marginLeft: '45%', width: 'fit-content' }} onClick={() => navigate('/login')}>Уже есть аккаунт?</button>
         </div>
     );
 }

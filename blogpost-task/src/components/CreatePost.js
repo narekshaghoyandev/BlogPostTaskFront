@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { domen } from '../config'
-
+import './CreatePost.css'
 function CreatePost() {
     const [content, setContent] = useState('');
     const [mediaUrl, setMediaUrl] = useState('');

@@ -1,0 +1,103 @@
+/* Основной контейнер */
+div {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 40px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Заголовок */
+h2 {
+    color: #333;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease-in-out;
+}
+
+h2:hover {
+    color: #d9534f;
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Текстовое поле для контента */
+textarea {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+textarea:focus {
+    border-color: #d9534f;
+    box-shadow: 0 0 8px rgba(217, 83, 79, 0.5);
+    outline: none;
+}
+
+/* Поле ввода для ссылки на медиа */
+input {
+    padding: 15px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #d9534f;
+    box-shadow: 0 0 8px rgba(217, 83, 79, 0.5);
+    outline: none;
+}
+
+/* Кнопка отправки */
+button {
+    background-color: #d9534f;
+    color: #fff;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    background-color: #c9302c;
+    transform: translateY(-3px);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    div {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    textarea,
+    input {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
+
+    button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+}

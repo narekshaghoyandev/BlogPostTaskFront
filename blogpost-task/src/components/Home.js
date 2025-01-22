@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { domen } from '../config'
-
+import './Home.css'; 
 function Home() {
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [posts, setPosts] = useState([]);
@@ -56,12 +56,10 @@ function Home() {
                         {posts.map((post) => (
                             <li key={post.id}>
                                 <div>
-                                    <p>{post.content}</p>
                                     {post.mediaUrl && <img src={post.mediaUrl} alt="Post media" />}
-                                    <p><strong>{post.author.username}</strong></p>
+                                    <p>{post.content}</p>
+                                    <p>Автор: <strong>{post.author.username}</strong></p>
                                     <p>{new Date(post.createdAt).toLocaleString()}</p>
-                                    <button onClick={() => navigate(`/edit/${post.id}`)}>Редактировать</button>
-                                    <button onClick={() => handleDelete(post.id)}>Удалить</button>
                                 </div>
                             </li>
                         ))}

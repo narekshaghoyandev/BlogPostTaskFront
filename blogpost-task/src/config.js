@@ -1,1 +1,1 @@
-export const domen = "https://blogposttask-production.up.railway.app/" 
+export const domen = "http://localhost:8080" 
